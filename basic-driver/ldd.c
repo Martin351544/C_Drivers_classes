@@ -9,13 +9,13 @@ MODULE_VERSION("1.0");
 
 static int __init hello_init(void)
 {
-	printk(KERN_INFO "Hello World! (From kernel module)");
+	printk(KERN_ALERT "Hello World! (From kernel module)");
 	return 0;
 }
 
 static void __exit hello_exit(void)
 {
-	printk(KERN_INFO "Goodbye World! (From kernel module)");
+	printk(KERN_ALERT "Goodbye World! (From kernel module)");
 }
 
 module_init(hello_init);

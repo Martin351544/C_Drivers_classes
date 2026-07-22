@@ -1,8 +1,8 @@
 #include <linux/init.h>
 #include <linux/module.h>
 
-MODULE_LICENCE("GPL");
-MOUDLE_AUTHOR("Martin");
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Martin");
 MODULE_DESCRIPTION("First dynamically loadable kernel module");
 
 static int main_module_init(void) {

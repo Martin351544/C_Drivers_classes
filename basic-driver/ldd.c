@@ -1,18 +1,22 @@
-#include <linux/init.h>
-#include <linux/module.h>
+#include<linux/init.h>
+#include<linux/module.h>
+#include<linux/kernel.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Martin");
-MODULE_DESCRIPTION("First dynamically loadable kernel module");
+MODULE_DESCRIPTION("A basic Linux kernel module");
+MODULE_VERSION("1.0");
 
-static int main_module_init(void) {
-	printk(KERN_INFO"Hello world! (from kernel module)");
+static int __init hello_init(void)
+{
+	printk(KERN_INFO "Hello World! (From kernel module)");
 	return 0;
 }
 
-static void main_module_exit(void) {
-	printk(KERN_INFO "Good bye! (from kernel module)");
+static void __exit hello_exit(void)
+{
+	printk(KERN_INFO "Goodbye World! (From kernel module)");
 }
 
-module_init(main_module_init);
-module_exit(main_module_exit);
+module_init(hello_init);
+module_exit(hello_exit);

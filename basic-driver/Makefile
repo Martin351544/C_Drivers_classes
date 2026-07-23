@@ -1,5 +1,5 @@
 
-obj-m += idd.o
+obj-m += ldd.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules

@@ -14,5 +14,5 @@ static void main_module_exit(void) {
 	printk("Goodbye (from kernel module)");
 }
 
-moudle_init(main_module_init);
+module_init(main_module_init);
 module_exit(main_module_exit);
